@@ -4,7 +4,7 @@ import { ApifyClient } from "apify-client";
 import { CITY_CONFIGS } from "../../config/cities";
 import { Lead } from "../types";
 
-const ACTOR_ID = "apify/google-maps-scraper";
+const ACTOR_ID = "compass/crawler-google-places";
 const MAX_CRAWLED_PLACES = 20;
 const RAW_DIR = path.resolve(__dirname, "../../data/raw_sources");
 
