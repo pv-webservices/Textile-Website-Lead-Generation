@@ -1,99 +1,19 @@
 [
   {
-    "id": "https://www.google.com/maps/search/?api=1&query=The%20Interior%20Alternative%20Fabric%20Outlet&query_place_id=ChIJTQZu2bubVogR5A_ESi2bl8E",
-    "name": "The Interior Alternative Fabric Outlet",
-    "address": "11435 Granite St # D, Charlotte, NC 28273",
+    "id": "https://www.google.com/maps/search/?api=1&query=Spruce%20Upholstery&query_place_id=ChIJL_zo5kfKRIYRyq6MoJVpbJw",
+    "name": "Spruce Upholstery",
+    "address": "630 Canion St, Austin, TX 78752",
     "city": "delhi",
-    "state": "North Carolina",
+    "state": "Texas",
     "country": "India",
-    "website": "https://www.fabricresource.com/charlotte/",
-    "source": "maps",
-    "category": "Fabric store",
-    "phones": [
-      "(704) 251-4030"
-    ],
-    "emails": [],
-    "platform": "other"
-  },
-  {
-    "id": "https://www.google.com/maps/search/?api=1&query=Robyn's%20Fabrics%20%26%20Custom%20Design%20Interiors&query_place_id=ChIJo8gxfVicVogRpzbrVrInJpE",
-    "name": "Robyn's Fabrics & Custom Design Interiors",
-    "address": "10703 Park Rd F, Charlotte, NC 28210",
-    "city": "delhi",
-    "state": "North Carolina",
-    "country": "India",
-    "website": "http://www.robynsfabrics.com/",
-    "source": "maps",
-    "category": "Fabric store",
-    "phones": [
-      "(704) 341-4466"
-    ],
-    "emails": [],
-    "platform": "other"
-  },
-  {
-    "id": "https://www.google.com/maps/search/?api=1&query=Modern%20Fabrics&query_place_id=ChIJYygbGH-fVogRw_uE7ReRRGc",
-    "name": "Modern Fabrics",
-    "address": "15435 NC-73, Huntersville, NC 28078",
-    "city": "delhi",
-    "state": "North Carolina",
-    "country": "India",
-    "website": "https://www.modern-fabrics.com/",
-    "source": "maps",
-    "category": "Fabric store",
-    "phones": [
-      "(704) 740-9676"
-    ],
-    "emails": [],
-    "platform": "unknown"
-  },
-  {
-    "id": "https://www.google.com/maps/search/?api=1&query=Dale-Ray%20Fabrics&query_place_id=ChIJhwPhXmEIVIgRAObanWYyd3c",
-    "name": "Dale-Ray Fabrics",
-    "address": "1121 N Main St, Kannapolis, NC 28081",
-    "city": "delhi",
-    "state": "North Carolina",
-    "country": "India",
-    "website": "https://www.dalerayfabrics.com/",
-    "source": "maps",
-    "category": "Fabric store",
-    "phones": [
-      "(704) 932-6411"
-    ],
-    "emails": [],
-    "platform": "unknown"
-  },
-  {
-    "id": "https://www.google.com/maps/search/?api=1&query=Loflin's%20Upholstery%20Draperies&query_place_id=ChIJh64hWDAOVIgRpyMZWOYTPhI",
-    "name": "Loflin's Upholstery Draperies",
-    "address": "339 Wilshire Ave SW, Concord, NC 28025",
-    "city": "delhi",
-    "state": "North Carolina",
-    "country": "India",
-    "website": "https://www.loflins.com/",
+    "website": "http://www.spruceaustin.com/",
     "source": "maps",
     "category": "Upholstery shop",
     "phones": [
-      "(704) 782-1612"
+      "(512) 454-8181"
     ],
     "emails": [],
-    "platform": "other"
-  },
-  {
-    "id": "https://www.google.com/maps/search/?api=1&query=Carolina%20Upholstery%20Shop%20%26%20Showroom&query_place_id=ChIJr2HZTkgRVIgRZFWc40Od1c0",
-    "name": "Carolina Upholstery Shop & Showroom",
-    "address": "6590 US-601, Concord, NC 28025",
-    "city": "delhi",
-    "state": "North Carolina",
-    "country": "India",
-    "website": "https://carolinaupholsteryshop.com/",
-    "source": "maps",
-    "category": "Upholstery shop",
-    "phones": [
-      "(704) 455-2004"
-    ],
-    "emails": [],
-    "platform": "other"
+    "platform": "wordpress"
   },
   {
     "id": "https://www.google.com/maps/search/?api=1&query=Cottons%20%26%20Satins&query_place_id=ChIJNXKC1vDiDDkR0adUS4CjeUQ",
@@ -208,33 +128,127 @@
     "platform": "other"
   },
   {
-    "id": "https://www.google.com/maps/search/?api=1&query=Sisters%20Fabrics&query_place_id=ChIJo3UnSnY9GIgRN5YUFsLK2i4",
-    "name": "Sisters Fabrics",
-    "address": "218 E State St, Hastings, MI 49058",
+    "id": "https://www.google.com/maps/search/?api=1&query=Maa%20Ambay%20Fabrics%20(MAF%20surplus%20Fabric%20Store)&query_place_id=ChIJQdCQso_8DDkRNU7Li3U7C6A",
+    "name": "Maa Ambay Fabrics (MAF surplus Fabric Store)",
+    "address": "X, azad clinic, 4127, Street Number 13, near Balmiki Chowk, Gandhi Nagar, Shanti Mohalla, Seelampur, Delhi, 110031, India",
     "city": "delhi",
-    "state": "Michigan",
+    "state": "Delhi",
     "country": "India",
-    "website": "http://www.facebook.com/sistersfabricsmi",
+    "website": "https://maaambayfabrics.com/",
     "source": "maps",
     "category": "Fabric store",
     "phones": [
-      "(269) 945-9673"
+      "+91 80766 42152"
     ],
     "emails": [],
     "platform": "unknown"
   },
   {
-    "id": "https://www.google.com/maps/search/?api=1&query=Rex%20Fabrics&query_place_id=ChIJVRMPKHW32YgRwccLdE1Y_FI",
-    "name": "Rex Fabrics",
-    "address": "825 SW 37th Ave, Miami, FL 33135",
+    "id": "https://www.google.com/maps/search/?api=1&query=ASADEEP%20OUTDOOR%20%26%20INDOOR%20FABRIC%20MANUFACTURERS&query_place_id=ChIJwf__mwkEDTkRoDijUBNDF8I",
+    "name": "ASADEEP OUTDOOR & INDOOR FABRIC MANUFACTURERS",
+    "address": "BA-19, Mangolpuri Industrial Area Phase II, Phase 2, Pocket BA, Industrial Area, Mangolpuri, Delhi, 110083, India",
     "city": "delhi",
-    "state": "Florida",
+    "state": "Delhi",
     "country": "India",
-    "website": "https://www.rexfabrics.com/",
+    "website": "http://www.asadeep.com/",
+    "source": "maps",
+    "category": "Manufacturer",
+    "phones": [],
+    "emails": [],
+    "platform": "other"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Gaurika%20Fabrics&query_place_id=ChIJa46aaEgdDTkRbcG7GzoJ1Tg",
+    "name": "Gaurika Fabrics",
+    "address": "gate no.3, 92E/1, Munirka Beneath OBC Bank, near Metro station, New Delhi, Delhi 110067, India",
+    "city": "delhi",
+    "state": "Delhi",
+    "country": "India",
+    "website": "https://www.gaurikafabrics.com/",
+    "source": "maps",
+    "category": "Fabric wholesaler",
+    "phones": [
+      "+91 89205 40889"
+    ],
+    "emails": [],
+    "platform": "wordpress"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=AMAR%20FURNISHING%20%26%20AMAR%20ENTERPRISES%20(best%20curtain%20and%20upholstery%20shop)&query_place_id=ChIJ9xsP6Q39DDkRHC6FD_wKAl0",
+    "name": "AMAR FURNISHING & AMAR ENTERPRISES (best curtain and upholstery shop)",
+    "address": "4544, Krishna Bazar, Cloth Market, Fatehpur, Tilak Road, New Delhi, Delhi 110006, India",
+    "city": "delhi",
+    "state": "Delhi",
+    "country": "India",
+    "website": "http://www.amarfurnishing.com/",
+    "source": "maps",
+    "category": "Upholstery shop",
+    "phones": [
+      "+91 99993 78496"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=ANAYA%20POLYCOATERS%20-REXINE%20MANUFACTURERS%20IN%20DELHI%20NCR&query_place_id=ChIJU2-72yv9DDkR-sgnDDtTeaU",
+    "name": "ANAYA POLYCOATERS -REXINE MANUFACTURERS IN DELHI NCR",
+    "address": "Shop no, 10815, Jhandewalan Rd, Nabi Karim, Paharganj, New Delhi, Delhi, 110055, India",
+    "city": "delhi",
+    "state": "Delhi",
+    "country": "India",
+    "website": "https://anaya-polycoaters-best.grexa.site/",
+    "source": "maps",
+    "category": "Manufacturer",
+    "phones": [
+      "+91 95555 55774"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Vardhman%20Enterprises%20wholesale%20Fabric&query_place_id=ChIJZYtUHcD9DDkRTTFk0gnetBg",
+    "name": "Vardhman Enterprises wholesale Fabric",
+    "address": "10640, Jhandewalan Rd, Nabi Karim, Sadar Bazaar, New Delhi, Delhi, 110055, India",
+    "city": "delhi",
+    "state": "Delhi",
+    "country": "India",
+    "website": "https://www.vardhmanenterprises.in/",
+    "source": "maps",
+    "category": "Fabric wholesaler",
+    "phones": [
+      "+91 98188 10466"
+    ],
+    "emails": [],
+    "platform": "other"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Colvin%20Draperies%20Inc&query_place_id=ChIJDTrCKR9t04kRSAziBQi8K3k",
+    "name": "Colvin Draperies Inc",
+    "address": "2429 Elmwood Ave, Kenmore, NY 14217",
+    "city": "delhi",
+    "state": "New York",
+    "country": "India",
+    "website": "https://www.colvindraperiesbuffalo.com/",
+    "source": "maps",
+    "category": "Window treatment store",
+    "phones": [
+      "(716) 362-9720"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Michaels&query_place_id=ChIJs_yqNzJz04kRVLluKXvaIn4",
+    "name": "Michaels",
+    "address": "Boulevard Consumer Square, 1569 Niagara Falls Blvd, Amherst, NY 14228",
+    "city": "delhi",
+    "state": "New York",
+    "country": "India",
+    "website": "https://locations.michaels.com/NY/Amherst/5184/?utm_source=Google&utm_medium=Maps&utm_campaign=Google+Places",
     "source": "maps",
     "category": "Fabric store",
     "phones": [
-      "(305) 306-8033"
+      "(716) 218-3144"
     ],
     "emails": [],
     "platform": "unknown"
@@ -256,33 +270,257 @@
     "platform": "unknown"
   },
   {
-    "id": "https://www.google.com/maps/search/?api=1&query=ASADEEP%20OUTDOOR%20%26%20INDOOR%20FABRIC%20MANUFACTURERS&query_place_id=ChIJwf__mwkEDTkRoDijUBNDF8I",
-    "name": "ASADEEP OUTDOOR & INDOOR FABRIC MANUFACTURERS",
-    "address": "BA-19, Mangolpuri Industrial Area Phase II, Phase 2, Pocket BA, Industrial Area, Mangolpuri, Delhi, 110083, India",
+    "id": "https://www.google.com/maps/search/?api=1&query=Aggarwal%20The%20Handloom%20Shop&query_place_id=ChIJBZhijtUaDTkRVOHSXpb-P98",
+    "name": "Aggarwal The Handloom Shop",
+    "address": "K-40 Rajapuri Tiranga Chowk, opp. Sec-4, Uttam Nagar, Dwarka, New Delhi, Delhi 110059, India",
     "city": "delhi",
     "state": "Delhi",
     "country": "India",
-    "website": "http://www.asadeep.com/",
+    "website": "https://aggarwalhandloom.com/",
     "source": "maps",
-    "category": "Manufacturer",
+    "category": "Curtain store",
+    "phones": [
+      "+91 99999 94965"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=DECOR%20HOME%20%2FCURTAIN%20SUPPLIER%20AND%20MAKERS%20IN%20LAJPAT%20NAGAR-%20DELHI&query_place_id=ChIJlbIUpC3jDDkRJTRxop1IZ6E",
+    "name": "DECOR HOME /CURTAIN SUPPLIER AND MAKERS IN LAJPAT NAGAR- DELHI",
+    "address": "F-10 LAJPAT NAGAR- 2 BLOCK-F, PART-2, Lajpat Nagar II, Lajpat Nagar, New Delhi, delhi, Delhi 110024, India",
+    "city": "delhi",
+    "state": "Delhi",
+    "country": "India",
+    "website": "https://decor-home-curtain.grexa.site/",
+    "source": "maps",
+    "category": "Curtain supplier and maker",
+    "phones": [
+      "+91 97174 18331"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Blinds%20N%20Curtains&query_place_id=ChIJ10K3S9caDTkRgFeNYl5P6w8",
+    "name": "Blinds N Curtains",
+    "address": "D-437, Ramphal Chowk, Sec 7, Dwarka, Block D, Palam Extension, New Delhi, Delhi 110077, India",
+    "city": "delhi",
+    "state": "Delhi",
+    "country": "India",
+    "website": "https://blindsncurtains.com/",
+    "source": "maps",
+    "category": "Curtain supplier and maker",
+    "phones": [
+      "+91 87449 88788"
+    ],
+    "emails": [],
+    "platform": "wordpress"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Rex%20Fabrics&query_place_id=ChIJVRMPKHW32YgRwccLdE1Y_FI",
+    "name": "Rex Fabrics",
+    "address": "825 SW 37th Ave, Miami, FL 33135",
+    "city": "delhi",
+    "state": "Florida",
+    "country": "India",
+    "website": "https://www.rexfabrics.com/",
+    "source": "maps",
+    "category": "Fabric store",
+    "phones": [
+      "(305) 306-8033"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Miami%20Upholstery%20and%20Fabrics%20Inc&query_place_id=ChIJ_XL5Rni32YgR78gGEmlI5Zk",
+    "name": "Miami Upholstery and Fabrics Inc",
+    "address": "895 SW 69th Ave, Miami, FL 33144",
+    "city": "delhi",
+    "state": "Florida",
+    "country": "India",
+    "website": "https://www.miamiupholsteryandfabrics.com/",
+    "source": "maps",
+    "category": "Upholstery shop",
+    "phones": [
+      "(305) 456-9571"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=V%20%26%20V%20Upholstery%20Supplies&query_place_id=ChIJV5QxMUCp2YgRRJADVGz4Qzs",
+    "name": "V & V Upholstery Supplies",
+    "address": "5700 Washington St Unit 2, Hollywood, FL 33023",
+    "city": "delhi",
+    "state": "Florida",
+    "country": "India",
+    "website": "https://vvupholsterysupply.com/",
+    "source": "maps",
+    "category": "Upholstery shop",
+    "phones": [
+      "(954) 966-7177"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=A%20to%20Z%20Fabrics&query_place_id=ChIJBVbeRpKu2YgRPys7QMUkvuY",
+    "name": "A to Z Fabrics",
+    "address": "19954 NW 2nd Ave, Miami, FL 33169",
+    "city": "delhi",
+    "state": "Florida",
+    "country": "India",
+    "website": "https://atozfabrics.com/",
+    "source": "maps",
+    "category": "Fabric store",
+    "phones": [
+      "(786) 657-2297"
+    ],
+    "emails": [],
+    "platform": "other"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Design%20Center%20of%20the%20Americas%20(DCOTA)&query_place_id=ChIJ2WYfcWqq2YgRWQ4gur4KHq0",
+    "name": "Design Center of the Americas (DCOTA)",
+    "address": "1855 Griffin Rd, Dania Beach, FL 33004",
+    "city": "delhi",
+    "state": "Florida",
+    "country": "India",
+    "website": "http://dcota.com/",
+    "source": "maps",
+    "category": "Fabric store",
+    "phones": [
+      "(954) 920-7997"
+    ],
+    "emails": [],
+    "platform": "wordpress"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Floor%20%26%20Furnishings%20%7C%20FF&query_place_id=ChIJaaq_eBcDDTkRMsaG8VStMic",
+    "name": "Floor & Furnishings | FF",
+    "address": "Block No.-2, 71/1, near SBI Bank, Block A, Kirti Nagar Industrial Area, Kirti Nagar, New Delhi, Delhi, 110015, India",
+    "city": "delhi",
+    "state": "Delhi",
+    "country": "India",
+    "website": "https://fandf.online/",
+    "source": "maps",
+    "category": "Upholstery shop",
+    "phones": [
+      "+91 11 4929 5300"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=VK%20Furnishing%20Wholesale%20Bedding%20Store%20in%20Chandni%20Chowk%2C%20Delhi%20%E2%80%93%20Bedsheets%2C%20Blankets%2C%20Comforters%20and%20More&query_place_id=ChIJYX4r5G79DDkRquTR4jDSugA",
+    "name": "VK Furnishing Wholesale Bedding Store in Chandni Chowk, Delhi – Bedsheets, Blankets, Comforters and More",
+    "address": "Shop no.2, 4861-62, Ganesh Bazar, near St. Stephen's Church, Cloth Market, Katra Ghel, Fatehpuri, Chandni Chowk, New Delhi, Delhi, 110006, India",
+    "city": "delhi",
+    "state": "Delhi",
+    "country": "India",
+    "website": "https://linktr.ee/vkfurnishing",
+    "source": "maps",
+    "category": "Bedding store",
+    "phones": [
+      "+91 75320 02298"
+    ],
+    "emails": [],
+    "platform": "other"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Garg%20Home%20Furnishing&query_place_id=ChIJi0tXKaH7DDkRLByRzBtpj6g",
+    "name": "Garg Home Furnishing",
+    "address": "F/F Shop, Vijay Chamber, 10240, Library Rd, Azad Market, Nawabganj, Tis Hazari, Delhi, 110006, India",
+    "city": "delhi",
+    "state": "Delhi",
+    "country": "India",
+    "website": "https://www.indiamart.com/garg-home-furnishing/",
+    "source": "maps",
+    "category": "Fabric wholesaler",
+    "phones": [
+      "+91 86071 27378"
+    ],
+    "emails": [],
+    "platform": "other"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=The%20Miami%20Corporation&query_place_id=ChIJNeN5bPrJQYgRrHyvO9tbZVw",
+    "name": "The Miami Corporation",
+    "address": "720 Anderson Ferry Rd, Cincinnati, OH 45238",
+    "city": "delhi",
+    "state": "Ohio",
+    "country": "India",
+    "website": "https://www.miamicorp.com/",
+    "source": "maps",
+    "category": "Fabric wholesaler",
+    "phones": [
+      "(513) 451-6700"
+    ],
+    "emails": [],
+    "platform": "other"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Village%20Art%20%26%20Craft%20USA%20Inc&query_place_id=ChIJTcwPlUm2t4kRmMmWiS7GFfY",
+    "name": "Village Art & Craft USA Inc",
+    "address": "1625 Wisconsin Ave NW, Washington, DC 20007",
+    "city": "delhi",
+    "state": "District of Columbia",
+    "country": "India",
+    "website": "http://sareeshopindc.com/",
+    "source": "maps",
+    "category": "Clothes market",
+    "phones": [
+      "(202) 333-1968"
+    ],
+    "emails": [],
+    "platform": "other"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Nalli%20at%20Ontario%20Canada&query_place_id=ChIJCa6RtwPX1IkRn2abb0mU96I",
+    "name": "Nalli at Ontario Canada",
+    "address": "20 New Delhi Dr #75, Markham, ON L3S 0B5, Canada",
+    "city": "delhi",
+    "state": "Ontario",
+    "country": "India",
+    "website": "http://www.nalli.com/",
+    "source": "maps",
+    "category": "Fabric store",
+    "phones": [
+      "+1 289-554-9000"
+    ],
+    "emails": [],
+    "platform": "unknown"
+  },
+  {
+    "id": "https://www.google.com/maps/search/?api=1&query=Leah%20Ureche%20Upholstery&query_place_id=ChIJkewkG41OpaMRgQ4KhLeeGg4",
+    "name": "Leah Ureche Upholstery",
+    "address": "",
+    "city": "delhi",
+    "state": "",
+    "country": "India",
+    "website": "https://www.leahurecheupholstery.com/",
+    "source": "maps",
+    "category": "Upholstery shop",
     "phones": [],
     "emails": [],
     "platform": "other"
   },
   {
-    "id": "https://www.google.com/maps/search/?api=1&query=Sarvodaya%20Traders&query_place_id=ChIJFxuDchwDDTkRW5vX444JJFA",
-    "name": "Sarvodaya Traders",
-    "address": "66, Furniture Block, Kirti Nagar Industrial Area, Kirti Nagar, New Delhi, Delhi, 110015, India",
+    "id": "https://www.google.com/maps/search/?api=1&query=Gurukirpa%20Wholesale%20(Gore%20Location)&query_place_id=ChIJx-dNCF49K4gRrv1n608UA8s",
+    "name": "Gurukirpa Wholesale (Gore Location)",
+    "address": "4525 Ebenezer Rd, Brampton, ON L6P 2K8, Canada",
     "city": "delhi",
-    "state": "Delhi",
+    "state": "Ontario",
     "country": "India",
-    "website": "http://www.sarvodaya.in/",
+    "website": "http://www.gurukirpawholesale.com/",
     "source": "maps",
     "category": "Fabric store",
     "phones": [
-      "+91 11 4551 3228"
+      "+1 905-794-4112"
     ],
     "emails": [],
-    "platform": "wordpress"
+    "platform": "unknown"
   }
 ]

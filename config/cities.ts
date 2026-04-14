@@ -1,6 +1,11 @@
+export interface GoogleMapsQuery {
+  query: string;
+  maxCrawledPlaces?: number;
+}
+
 export interface CityQueries {
   justdial: string[];
-  maps: string[];
+  maps: GoogleMapsQuery[];
 }
 
 export interface CityConfig {
@@ -15,7 +20,12 @@ export const CITY_CONFIGS: Record<string, CityConfig> = {
     displayName: "Delhi",
     queries: {
       justdial: ["sofa fabric wholesaler", "curtain fabric dealer"],
-      maps: ["upholstery fabric store Delhi", "curtain fabric store Delhi", "sofa fabric dealer Delhi"],
+      maps: [
+        { query: "upholstery fabric store Delhi", maxCrawledPlaces: 80 },
+        { query: "curtain fabric shop Delhi", maxCrawledPlaces: 80 },
+        { query: "sofa fabric store Delhi", maxCrawledPlaces: 80 },
+        { query: "furnishing fabric Delhi", maxCrawledPlaces: 80 },
+      ],
     },
   },
   surat: {
@@ -23,7 +33,11 @@ export const CITY_CONFIGS: Record<string, CityConfig> = {
     displayName: "Surat",
     queries: {
       justdial: ["fabric manufacturer", "curtain fabric manufacturer"],
-      maps: ["fabric manufacturer Surat", "curtain fabric store Surat", "upholstery fabric Surat"],
+      maps: [
+        { query: "fabric manufacturer Surat", maxCrawledPlaces: 80 },
+        { query: "curtain fabric store Surat", maxCrawledPlaces: 80 },
+        { query: "upholstery fabric Surat", maxCrawledPlaces: 80 },
+      ],
     },
   },
 };

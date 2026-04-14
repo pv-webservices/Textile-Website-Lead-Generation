@@ -1,11 +1,11 @@
 import * as fs from "fs";
 import * as path from "path";
 import { ApifyClient } from "apify-client";
-import { CITY_CONFIGS } from "../../config/cities";
+import { CITY_CONFIGS, GoogleMapsQuery } from "../../config/cities";
 import { Lead } from "../types";
 
 const ACTOR_ID = "compass/crawler-google-places";
-const MAX_CRAWLED_PLACES = 20;
+const DEFAULT_MAX_CRAWLED_PLACES = 80;
 const RAW_DIR = path.resolve(__dirname, "../../data/raw_sources");
 
 // Shape of a single item returned by apify/google-maps-scraper
@@ -45,6 +45,14 @@ function mapToLead(item: GoogleMapsItem, cityId: string, query: string): Lead {
   };
 }
 
+function getQueryText(query: GoogleMapsQuery): string {
+  return query.query;
+}
+
+function getMaxCrawledPlaces(query: GoogleMapsQuery): number {
+  return query.maxCrawledPlaces ?? DEFAULT_MAX_CRAWLED_PLACES;
+}
+
 export async function fetchGoogleMapsLeads(cityId: string): Promise<Lead[]> {
   const config = CITY_CONFIGS[cityId];
   if (!config) {
@@ -55,12 +63,14 @@ export async function fetchGoogleMapsLeads(cityId: string): Promise<Lead[]> {
   const allRaw: GoogleMapsItem[] = [];
   const allLeads: Lead[] = [];
 
-  for (const query of config.queries.maps) {
-    console.log(`  [GoogleMaps] Running: "${query}"`);
+  for (const queryConfig of config.queries.maps) {
+    const query = getQueryText(queryConfig);
+    const maxCrawledPlaces = getMaxCrawledPlaces(queryConfig);
+    console.log(`  [GoogleMaps] Running: "${query}" (maxCrawledPlaces=${maxCrawledPlaces})`);
 
     const run = await client.actor(ACTOR_ID).call({
       searchStringsArray: [query],
-      maxCrawledPlacesPerSearch: MAX_CRAWLED_PLACES,
+      maxCrawledPlacesPerSearch: maxCrawledPlaces,
       language: "en",
     });
 

@@ -41,19 +41,16 @@ export function scoreLead(lead: Lead): number {
   // --- Wholesale signal ---
   if (containsAny(text, WHOLESALE_KEYWORDS)) score += 3;
 
-  // --- Contact completeness ---
-  if (lead.website && lead.website.trim()) score += 2;
-
   // --- Source priority bonus ---
-  // Shopify dataset leads are pre-verified Shopify stores; Maps are higher quality than JustDial
   if (lead.source === "shopify") score += 3;
   else if (lead.source === "maps") score += 1;
   // justdial: +0
 
-  // --- Platform bonus (always Shopify by this stage, but kept for correctness) ---
-  if (lead.platform === "shopify") score += 3;
-  else if (lead.platform === "wix") score += 2;
-  else if (lead.platform === "wordpress") score += 1;
+  // --- Platform bonus ---
+  if (lead.platform === "shopify") score += 5;
+  else if (lead.platform === "wix") score += 3;
+  else if (lead.platform === "wordpress") score += 2;
+  else if (lead.platform === "other") score += 1;
 
   return score;
 }

@@ -7,9 +7,9 @@ const SITES_DIR = path.resolve(__dirname, "../../data/raw_sites");
 const SCORED_DIR = path.resolve(__dirname, "../../data/scored_leads");
 
 export async function selectTopLeads(cityId: string, target: number): Promise<Lead[]> {
-  const sitesPath = path.join(SITES_DIR, `${cityId}-shopify-only.json`);
+  const sitesPath = path.join(SITES_DIR, `${cityId}.json`);
   if (!fs.existsSync(sitesPath)) {
-    throw new Error(`Shopify-only leads file not found: ${sitesPath}`);
+    throw new Error(`Platform-enriched leads file not found: ${sitesPath}`);
   }
 
   const leads: Lead[] = JSON.parse(fs.readFileSync(sitesPath, "utf-8"));
