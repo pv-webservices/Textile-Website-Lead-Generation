@@ -63,7 +63,11 @@ export async function fetchIndiamartLeads(cityId: string): Promise<Lead[]> {
   const allRaw: IndiamartItem[] = [];
   const allLeads: Lead[] = [];
 
-  for (const query of config.queries.indiamart) {
+  // NOTE: IndiaMART is no longer part of the active pipeline (removed in favour of
+  // Shopify + Google Maps + JustDial). This file is kept for reference only.
+  // The 'indiamart' query key has been removed from CityQueries; cast to any to compile.
+  const indiamartQueries: string[] = (config.queries as any).indiamart ?? [];
+  for (const query of indiamartQueries) {
     const searchUrl = buildSearchUrl(query);
     console.log(`  [IndiaMART] Running: "${query}" → ${searchUrl}`);
 

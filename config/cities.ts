@@ -1,6 +1,6 @@
 export interface CityQueries {
   justdial: string[];
-  indiamart: string[];
+  maps: string[];
 }
 
 export interface CityConfig {
@@ -15,7 +15,7 @@ export const CITY_CONFIGS: Record<string, CityConfig> = {
     displayName: "Delhi",
     queries: {
       justdial: ["sofa fabric wholesaler", "curtain fabric dealer"],
-      indiamart: ["upholstery fabric supplier", "curtain fabric distributor"],
+      maps: ["upholstery fabric store Delhi", "curtain fabric store Delhi", "sofa fabric dealer Delhi"],
     },
   },
   surat: {
@@ -23,7 +23,7 @@ export const CITY_CONFIGS: Record<string, CityConfig> = {
     displayName: "Surat",
     queries: {
       justdial: ["fabric manufacturer", "curtain fabric manufacturer"],
-      indiamart: ["sofa upholstery fabric surat", "jacquard fabric manufacturer"],
+      maps: ["fabric manufacturer Surat", "curtain fabric store Surat", "upholstery fabric Surat"],
     },
   },
 };

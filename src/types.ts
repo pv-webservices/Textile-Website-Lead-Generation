@@ -6,7 +6,7 @@ export interface Lead {
   state: string;
   country: string;
   website: string;
-  source: string;       // e.g. "justdial", "indiamart", "shopify"
+  source: string;       // "shopify" | "maps" | "justdial"
   category: string;     // e.g. "sofa fabric", "curtain fabric"
   phones: string[];
   emails: string[];

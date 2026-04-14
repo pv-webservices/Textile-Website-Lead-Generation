@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { Lead } from "../types";
+import { FABRIC_KEYWORDS } from "../../config/keywords";
 
 const RAW_DIR = path.resolve(__dirname, "../../data/raw_sources");
 const SITES_DIR = path.resolve(__dirname, "../../data/raw_sites");
@@ -19,17 +20,14 @@ interface JustdialItem {
   listing_url?: string;
 }
 
-interface IndiamartCompany {
-  name?: string;
-  websiteUrl?: string;
-  phoneNumber?: string;
-  address?: string;
-}
-
-interface IndiamartItem {
+interface GoogleMapsItem {
   title?: string;
+  website?: string;
+  address?: string;
+  phone?: string;
   url?: string;
-  companyDetails?: IndiamartCompany;
+  categoryName?: string;
+  state?: string;
 }
 
 interface ShopifyItem {
@@ -75,7 +73,12 @@ function normalizePhone(raw: string): string {
 }
 
 function isIndia(lead: Lead): boolean {
-  if (lead.source === "justdial" || lead.source === "indiamart") return true;
+  if (
+    lead.source === "justdial" ||
+    lead.source === "maps" ||
+    lead.source === "shopify"
+  )
+    return true;
   if (lead.country === "India") return true;
   if (lead.address && lead.address.toLowerCase().includes("india")) return true;
   const domain = extractDomain(lead.website);
@@ -83,8 +86,17 @@ function isIndia(lead: Lead): boolean {
   return false;
 }
 
+function hasWebsite(lead: Lead): boolean {
+  return Boolean(lead.website && lead.website.trim() !== "");
+}
+
+function hasFabricKeyword(lead: Lead): boolean {
+  const text = [lead.name, lead.category].join(" ").toLowerCase();
+  return FABRIC_KEYWORDS.some((kw) => text.includes(kw.toLowerCase()));
+}
+
 // ---------------------------------------------------------------------------
-// Per-source mappers (read from disk, so we re-derive city/category from item)
+// Per-source mappers
 // ---------------------------------------------------------------------------
 
 function mapJustdialItem(item: JustdialItem, cityId: string): Lead {
@@ -103,19 +115,18 @@ function mapJustdialItem(item: JustdialItem, cityId: string): Lead {
   };
 }
 
-function mapIndiamartItem(item: IndiamartItem, cityId: string): Lead {
-  const co = item.companyDetails ?? {};
+function mapGoogleMapsItem(item: GoogleMapsItem, cityId: string): Lead {
   return {
-    id: item.url ?? `indiamart-${cityId}-${Math.random().toString(36).slice(2)}`,
-    name: co.name ?? item.title ?? "",
-    address: co.address ?? "",
+    id: item.url ?? `maps-${cityId}-${Math.random().toString(36).slice(2)}`,
+    name: item.title ?? "",
+    address: item.address ?? "",
     city: cityId,
-    state: "",
+    state: item.state ?? "",
     country: "India",
-    website: co.websiteUrl ?? "",
-    source: "indiamart",
-    category: "fabric",
-    phones: co.phoneNumber ? [co.phoneNumber] : [],
+    website: item.website ?? "",
+    source: "maps",
+    category: item.categoryName ?? "fabric",
+    phones: item.phone ? [item.phone] : [],
     emails: [],
   };
 }
@@ -191,32 +202,48 @@ export async function normalizeCityLeads(cityId: string): Promise<Lead[]> {
   const justdialRaw = loadJson<JustdialItem>(
     path.join(RAW_DIR, `${cityId}-justdial.json`)
   );
-  const indiamartRaw = loadJson<IndiamartItem>(
-    path.join(RAW_DIR, `${cityId}-indiamart.json`)
+  const mapsRaw = loadJson<GoogleMapsItem>(
+    path.join(RAW_DIR, `${cityId}-maps.json`)
   );
   const shopifyRaw = loadJson<ShopifyItem>(
     path.join(RAW_DIR, "shopify-fabric-in.json")
   );
 
   console.log(
-    `  [normalize] Raw counts — JustDial: ${justdialRaw.length}, IndiaMART: ${indiamartRaw.length}, Shopify: ${shopifyRaw.length}`
+    `  [normalize] Raw counts — JustDial: ${justdialRaw.length}, Maps: ${mapsRaw.length}, Shopify: ${shopifyRaw.length}`
   );
 
   const allLeads: Lead[] = [
     ...justdialRaw.map((item) => mapJustdialItem(item, cityId)),
-    ...indiamartRaw.map((item) => mapIndiamartItem(item, cityId)),
+    ...mapsRaw.map((item) => mapGoogleMapsItem(item, cityId)),
     ...shopifyRaw.map(mapShopifyItem),
   ];
 
+  // Filter 1: India only
   const indiaLeads = allLeads.filter(isIndia);
-  const dropped = allLeads.length - indiaLeads.length;
-  if (dropped > 0) {
-    console.log(`  [normalize] Dropped ${dropped} non-India leads`);
+  const droppedCountry = allLeads.length - indiaLeads.length;
+  if (droppedCountry > 0) {
+    console.log(`  [normalize] Dropped ${droppedCountry} non-India leads`);
   }
 
-  const unique = deduplicateLeads(indiaLeads);
+  // Filter 2: Must have a website
+  const withWebsite = indiaLeads.filter(hasWebsite);
+  const droppedNoSite = indiaLeads.length - withWebsite.length;
+  if (droppedNoSite > 0) {
+    console.log(`  [normalize] Dropped ${droppedNoSite} leads without a website`);
+  }
+
+  // Filter 3: Must mention a fabric/furnishing keyword
+  const fabricLeads = withWebsite.filter(hasFabricKeyword);
+  const droppedNonFabric = withWebsite.length - fabricLeads.length;
+  if (droppedNonFabric > 0) {
+    console.log(`  [normalize] Dropped ${droppedNonFabric} non-fabric leads`);
+  }
+
+  // Deduplicate by domain / phone
+  const unique = deduplicateLeads(fabricLeads);
   console.log(
-    `  [normalize] After dedup: ${unique.length} unique leads (removed ${indiaLeads.length - unique.length} duplicates)`
+    `  [normalize] After dedup: ${unique.length} unique leads (removed ${fabricLeads.length - unique.length} duplicates)`
   );
 
   fs.mkdirSync(SITES_DIR, { recursive: true });
