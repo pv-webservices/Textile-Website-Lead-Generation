@@ -1,0 +1,20 @@
+{
+  "name": "fabric-lead-agent",
+  "version": "0.1.0",
+  "description": "Lead generation agent for fabric businesses in India",
+  "main": "dist/runCity.js",
+  "scripts": {
+    "dev:delhi": "ts-node src/runCity.ts --city=delhi --target=40",
+    "dev:surat": "ts-node src/runCity.ts --city=surat --target=40",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "apify-client": "^2.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}
