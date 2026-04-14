@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { CITIES } from "../config/cities";
 import { fetchJustdialLeads } from "./skills/apifyJustdialLeads";
 import { fetchIndiamartLeads } from "./skills/apifyIndiamartLeads";
@@ -38,6 +39,11 @@ function parseArgs(): { city: string; target: number } {
 }
 
 async function main() {
+  if (!process.env.APIFY_TOKEN) {
+    console.error('APIFY_TOKEN is not set. Create a .env file with APIFY_TOKEN=<your-token>.');
+    process.exit(1);
+  }
+
   const { city, target } = parseArgs();
   console.log(`\nStarting pipeline for city="${city}", target=${target}\n`);
 

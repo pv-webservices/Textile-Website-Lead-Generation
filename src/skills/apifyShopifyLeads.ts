@@ -25,7 +25,7 @@ interface ShopifyItem {
 function getClient(): ApifyClient {
   const token = process.env.APIFY_TOKEN;
   if (!token) {
-    throw new Error("APIFY_TOKEN environment variable is not set");
+    throw new Error('APIFY_TOKEN is missing. Please create a .env file with APIFY_TOKEN=<your-token>.');
   }
   return new ApifyClient({ token });
 }
