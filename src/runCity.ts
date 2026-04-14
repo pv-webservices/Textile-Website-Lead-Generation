@@ -7,6 +7,10 @@ import {
   loadShopifyLeadsFromCache,
 } from "./skills/apifyShopifyLeads";
 import { normalizeCityLeads } from "./skills/normalizeLeads";
+import { detectStacks } from "./skills/detectStack";
+import { selectTopLeads } from "./skills/selectTopLeads";
+import { summarizeSites } from "./skills/summarizeSites";
+import { auditLeads } from "./skills/auditLeads";
 
 function parseArgs(): { city: string; target: number } {
   const args = process.argv.slice(2);
@@ -35,7 +39,10 @@ function parseArgs(): { city: string; target: number } {
 
 async function main() {
   const { city, target } = parseArgs();
-  console.log(`\nStarting lead fetch for city="${city}", target=${target}\n`);
+  console.log(`\nStarting pipeline for city="${city}", target=${target}\n`);
+
+  // ── Stage 1: Fetch raw data from Apify ────────────────────────────────────
+  console.log("── Stage 1: Fetching raw leads ──");
 
   // Shopify results are India-wide — fetch once and cache, reuse on subsequent runs
   const shopifyPromise = shopifyCacheExists()
@@ -51,14 +58,45 @@ async function main() {
     shopifyPromise,
   ]);
 
-  console.log(`\nResults:`);
-  console.log(`  JustDial  → ${justdialLeads.length} leads`);
+  console.log(`\n  JustDial  → ${justdialLeads.length} leads`);
   console.log(`  IndiaMART → ${indiamartLeads.length} leads`);
   console.log(`  Shopify   → ${shopifyLeads.length} leads (India-wide, unfiltered)`);
-  console.log(`  Total     → ${justdialLeads.length + indiamartLeads.length + shopifyLeads.length} leads`);
 
+  // ── Stage 2: Normalize + deduplicate ──────────────────────────────────────
+  console.log("\n── Stage 2: Normalizing ──");
   const uniqueLeads = await normalizeCityLeads(city);
-  console.log(`\n  Normalized → ${uniqueLeads.length} unique Indian leads`);
+  console.log(`  Unique Indian leads → ${uniqueLeads.length}`);
+
+  // ── Stage 3: Platform detection ───────────────────────────────────────────
+  console.log("\n── Stage 3: Detecting stacks ──");
+  const enrichedLeads = await detectStacks(city);
+  console.log(`  Enriched leads → ${enrichedLeads.length}`);
+
+  // ── Stage 4: Score + select ───────────────────────────────────────────────
+  console.log("\n── Stage 4: Scoring + selecting ──");
+  const topLeads = await selectTopLeads(city, target);
+
+  // Preview top 5
+  console.log(`\nTop 5 leads for "${city}":`);
+  topLeads.slice(0, 5).forEach((lead, i) => {
+    console.log(`  ${i + 1}. ${lead.name || "(no name)"} — score: ${lead.score ?? 0} — ${lead.website || "no website"}`);
+  });
+
+  // ── Stage 5: Summarise sites (fetch HTML metadata) ────────────────────────
+  console.log("\n── Stage 5: Summarising sites ──");
+  await summarizeSites(city);
+
+  // ── Stage 6: LLM audit ────────────────────────────────────────────────────
+  console.log("\n── Stage 6: LLM audit ──");
+  const audits = await auditLeads(city);
+
+  console.log(`\nTop 5 audit results for "${city}":`);
+  audits.slice(0, 5).forEach((a, i) => {
+    console.log(`  ${i + 1}. [${a.fit_score}/10] ${a.id}`);
+    console.log(`     Issue: ${a.main_issue}`);
+  });
+
+  console.log(`\nDone. ${audits.length} leads audited.`);
 }
 
 main().catch((err) => {

@@ -37,3 +37,70 @@ export const SEARCH_KEYWORDS: Record<FabricCategory, string[]> = {
     "cushion fabric",
   ],
 };
+
+// ---------------------------------------------------------------------------
+// Scoring keyword lists
+// ---------------------------------------------------------------------------
+
+/** Any of these in name/category signals a genuine fabric lead. */
+export const FABRIC_KEYWORDS: string[] = [
+  "fabric",
+  "textile",
+  "cloth",
+  "upholstery",
+  "curtain",
+  "drape",
+  "furnishing",
+  "rexine",
+  "velvet",
+  "jacquard",
+  "brocade",
+  "chenille",
+  "sofa material",
+  "sofa cloth",
+];
+
+/** Leads matching any of these are irrelevant — hard-drop them. */
+export const EXCLUDE_KEYWORDS: string[] = [
+  "restaurant",
+  "hotel",
+  "food",
+  "catering",
+  "hospital",
+  "clinic",
+  "pharmacy",
+  "software",
+  "it services",
+  "digital marketing",
+  "real estate",
+  "education",
+  "school",
+  "college",
+  "travel",
+  "tour",
+  "insurance",
+  "loan",
+  "finance",
+  "jewellery",
+  "jewelry",
+  "clothing boutique",
+  "fashion boutique",
+  "readymade",
+  "garment",
+  "tailor",
+];
+
+/** Presence of these terms indicates a B2B wholesale / trade buyer — good signal. */
+export const WHOLESALE_KEYWORDS: string[] = [
+  "wholesale",
+  "wholesaler",
+  "distributor",
+  "manufacturer",
+  "supplier",
+  "trader",
+  "exporter",
+  "importer",
+  "bulk",
+  "b2b",
+  "dealer",
+];

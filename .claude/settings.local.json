@@ -4,7 +4,9 @@
       "Bash(npm install:*)",
       "Bash(npm run:*)",
       "WebFetch(domain:apify.com)",
-      "WebSearch"
+      "WebSearch",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)"
     ]
   }
 }
